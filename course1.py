@@ -1,7 +1,7 @@
 import cv2
 from tkinter import *
 from tkinter import ttk
-    
+  
 app = Tk()
 #app.geometry("1000x1000")
 #canvas=tk.Canvas(app)
