@@ -3,7 +3,7 @@ import cv2
 from tkinter import *
 from tkinter import ttk
 #import mp(quiz python)
-
+from ffpyplayer.player import MediaPlayer
     
 app = Tk()
 app.geometry("3000x3000")
@@ -43,14 +43,14 @@ photo = PhotoImage(file = r"pythonpic.png")
   
 # here, image option is used to 
 # set image on button
-def rescale_frame(frame, percent=250):
+def rescale_frame(frame, percent=200):
     width = int(frame.shape[1] * percent/ 100)
     height = int(frame.shape[0] * percent/ 100)
     dim = (width, height)
     return cv2.resize(frame, dim, interpolation =cv2.INTER_AREA)
 def play_vid():
     cap = cv2.VideoCapture('vid1.mp4')
-
+    player = MediaPlayer('vid1.mp4')
     # Check if camera opened successfully
     if (cap.isOpened()== False):
       print("Error opening video stream or file")
@@ -60,18 +60,24 @@ def play_vid():
         # Capture frame-by-frame
 
         ret, frame = cap.read()
+        audio_frame, val = player.get_frame()
         #farme.read()
         if ret == True:
 
             # Display the resulting frame
-            frame75= rescale_frame(frame, percent=250)
+            frame75= rescale_frame(frame, percent=200)
             cv2.imshow('Frame', frame75)
-
-            # Press Q on keyboard to  exit
-            if cv2.waitKey(25) == ord('q'):
+            if val != 'eof' and audio_frame is not None:
+            #audio
+                img, t = audio_frame
+            key = cv2.waitKey(28)
+            if key == ord('q'):
                 break
-
-        # Break the loop
+            if key == ord('p'):
+                player.toggle_pause()
+                cv2.waitKey(-1) #wait until any key is pressed
+                player.toggle_pause()
+            # Break the loop
         else:
             break
 
