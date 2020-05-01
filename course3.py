@@ -1,4 +1,4 @@
-#import cv2
+import cv2
 from tkinter import *
 from tkinter import ttk
 from ffpyplayer.player import MediaPlayer
@@ -48,8 +48,8 @@ def rescale_frame(frame, percent=250):
     dim = (width, height)
     return cv2.resize(frame, dim, interpolation =cv2.INTER_AREA)
 def play_vid():
-    cap = cv2.VideoCapture('vid1.mp4')
-    player = MediaPlayer('vid1.mp4')
+    cap = cv2.VideoCapture('vid5.mp4')
+    player = MediaPlayer('vid5.mp4')
     # Check if camera opened successfully
     if (cap.isOpened()== False):
       print("Error opening video stream or file")
@@ -108,23 +108,30 @@ tab_control.add(tab4, text='Week 4')
 tab_control.pack(expand=True, fill='x', padx=40)
 title1= Label(tab1, text="Week 1", font=("Times", 20), fg="#349310", bg="#F4F4A3")
 title1.pack(pady=30, fill='x')
+java1= PhotoImage(file=r'java1.png')
 
-label2= Label(tab1, font=("Times", 15), text="Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy.\n This chapter helps you become an expert in using Python's object-oriented programming support.\nIf you do not have any previous experience with object-oriented (OO) programming, you may want to consult\n an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic concepts\n.However, here is small introduction of Object-Oriented Programming (OOP) to bring you at speed −\n\nOverview of OOP Terminology\n\nClass − A user-defined prototype for an object that defines a set of attributes that characterize any object of the class.\nThe attributes are data members (class variables and instance variables) and methods, accessed via dot notation.\nClass variable − A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class methods.\n Class variables are not used as frequently as instance variables are.Data member − A class variable or instance variable that holds data associated with a class and its objects.\nFunction overloading − The assignment of more than one behavior to a particular function. The operation \nperformed varies by the types of objects or arguments involved.\nInstance variable − A variable that is defined inside a method and belongs only to the current instance of a class.\nInheritance − The transfer of the characteristics of a class to other classes that are derived from it.\nInstance − An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.\nInstantiation − The creation of an instance of a class.\nMethod − A special kind of function that is defined in a class definition.\nObject − A unique instance of a data structure that defined by its class. An object comprises both data members \n(class variables and instance variables) and methods.\nOperator overloading − The assignment of more than one function to a particular operator.")
-label2.pack(pady=20, padx=20, side='left', fill='x')
+label2= Label(tab1, font=("Times", 20),text="Java Tutorial: This reference will take you through simple and practical approaches while learning Java Programming language.")
+label2.pack(pady=20, padx=20,fill='x')
+lb2= Label(tab1, image=java1)
+lb2.pack(pady=20,padx=20, fill='x')
 title2= Label(tab2, text="Week 2", font=("Times", 20), fg="#349310", bg="#F4F4A3")
 title2.pack(pady=30, fill='x')
-
-label3= Label(tab2, font=("Times", 15), text="Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy.\n This chapter helps you become an expert in using Python's object-oriented programming support.\nIf you do not have any previous experience with object-oriented (OO) programming, you may want to consult\n an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic concepts\n.However, here is small introduction of Object-Oriented Programming (OOP) to bring you at speed −\n\nOverview of OOP Terminology\n\nClass − A user-defined prototype for an object that defines a set of attributes that characterize any object of the class.\nThe attributes are data members (class variables and instance variables) and methods, accessed via dot notation.\nClass variable − A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class methods.\n Class variables are not used as frequently as instance variables are.Data member − A class variable or instance variable that holds data associated with a class and its objects.\nFunction overloading − The assignment of more than one behavior to a particular function. The operation \nperformed varies by the types of objects or arguments involved.\nInstance variable − A variable that is defined inside a method and belongs only to the current instance of a class.\nInheritance − The transfer of the characteristics of a class to other classes that are derived from it.\nInstance − An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.\nInstantiation − The creation of an instance of a class.\nMethod − A special kind of function that is defined in a class definition.\nObject − A unique instance of a data structure that defined by its class. An object comprises both data members \n(class variables and instance variables) and methods.\nOperator overloading − The assignment of more than one function to a particular operator.")
-label3.pack(pady=20, padx=20, side='left', fill='x')
+java2= PhotoImage(file=r'java2.png')
+label3= Label(tab2, image=java2)
+label3.pack(pady=20, padx=20, fill='x')
 title3= Label(tab3, text="Week 3", font=("Times", 20), fg="#349310", bg="#F4F4A3")
 title3.pack(pady=30, fill='x')
-
-label4= Label(tab3, font=("Times", 15), text="Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy.\n This chapter helps you become an expert in using Python's object-oriented programming support.\nIf you do not have any previous experience with object-oriented (OO) programming, you may want to consult\n an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic concepts\n.However, here is small introduction of Object-Oriented Programming (OOP) to bring you at speed −\n\nOverview of OOP Terminology\n\nClass − A user-defined prototype for an object that defines a set of attributes that characterize any object of the class.\nThe attributes are data members (class variables and instance variables) and methods, accessed via dot notation.\nClass variable − A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class methods.\n Class variables are not used as frequently as instance variables are.Data member − A class variable or instance variable that holds data associated with a class and its objects.\nFunction overloading − The assignment of more than one behavior to a particular function. The operation \nperformed varies by the types of objects or arguments involved.\nInstance variable − A variable that is defined inside a method and belongs only to the current instance of a class.\nInheritance − The transfer of the characteristics of a class to other classes that are derived from it.\nInstance − An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.\nInstantiation − The creation of an instance of a class.\nMethod − A special kind of function that is defined in a class definition.\nObject − A unique instance of a data structure that defined by its class. An object comprises both data members \n(class variables and instance variables) and methods.\nOperator overloading − The assignment of more than one function to a particular operator.")
-label4.pack(pady=20, padx=20, side='left', fill='x')
+java3= PhotoImage(file=r'java3.png')
+label4=Label(tab3, image=java3)
+label4.pack(pady=20, padx=20, fill='x')
 title4= Label(tab4, text="Week 4", font=("Times", 20), fg="#349310", bg="#F4F4A3")
 title4.pack(pady=30, fill='x')
-label5= Label(tab4, font=("Times", 15), text="Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy.\n This chapter helps you become an expert in using Python's object-oriented programming support.\nIf you do not have any previous experience with object-oriented (OO) programming, you may want to consult\n an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic concepts\n.However, here is small introduction of Object-Oriented Programming (OOP) to bring you at speed −\n\nOverview of OOP Terminology\n\nClass − A user-defined prototype for an object that defines a set of attributes that characterize any object of the class.\nThe attributes are data members (class variables and instance variables) and methods, accessed via dot notation.\nClass variable − A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class methods.\n Class variables are not used as frequently as instance variables are.Data member − A class variable or instance variable that holds data associated with a class and its objects.\nFunction overloading − The assignment of more than one behavior to a particular function. The operation \nperformed varies by the types of objects or arguments involved.\nInstance variable − A variable that is defined inside a method and belongs only to the current instance of a class.\nInheritance − The transfer of the characteristics of a class to other classes that are derived from it.\nInstance − An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.\nInstantiation − The creation of an instance of a class.\nMethod − A special kind of function that is defined in a class definition.\nObject − A unique instance of a data structure that defined by its class. An object comprises both data members \n(class variables and instance variables) and methods.\nOperator overloading − The assignment of more than one function to a particular operator.")
-label5.pack(pady=20, padx=20, side='left', fill='x')
+java4= PhotoImage(file=r'java4.png')
+lab5= Label(tab4, font=("Times", 13),text="Every applet is an extension of the java.applet.Applet class. The base Applet class provides methods that a derived Applet class may call to obtain information and services from the browser context.")
+lab5.pack(pady=20, padx=20, fill='x')
+label5=Label(tab4, image=java4)
+
+label5.pack(pady=20, padx=20,  fill='x')
 
 def button_countdown(root,i, label):                                 #for timer
     if i > 0:

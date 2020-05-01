@@ -59,6 +59,7 @@ class CourseFrame(Frame):
 
     def open(self, data):
         #PathPy = filedialog.askopenfilename(title="Open a file",filetypes=[('PYTHON file','.py')])
+        
         os.system( data )
 
     
